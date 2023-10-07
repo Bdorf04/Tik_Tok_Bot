@@ -6,7 +6,7 @@ This tiktok bot automatically scrapes stories from reddit, voices it, and combin
 
 ---
 
-## How to use
+## How to use the bot
 
 1. Downlaod Python [Here](https://www.python.org/downloads/)
 
@@ -18,6 +18,7 @@ This tiktok bot automatically scrapes stories from reddit, voices it, and combin
     'git clone https://github.com/Bdorf04 Tik_Tok_Bot.git'
 
 
+## How does it work
 The code is split into multiple files, each which need a little tweaking
 
 * The audio/video files
@@ -38,6 +39,7 @@ The code is split into multiple files, each which need a little tweaking
     url="https://www.reddit.com/r/relationships" 
     story_list=get_stories(url, 10)
     ```
+---
 Finally, we bring all the files together, finishing our tiktok Bot!
 
 ``` python
