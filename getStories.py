@@ -4,12 +4,14 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-import requests
 from bs4 import BeautifulSoup 
+
+import requests
 import time
 
+
 #working on opening and screenshoting things and them Ima throw them on top of the video
-def getStories(url, end): #grab stories from reddit url and format them into a list of titles and a list of stories
+def get_stories(url, end): #grab stories from reddit url and format them into a list of titles and a list of stories
     stories = []
     driver = webdriver.Chrome()
     
@@ -36,8 +38,8 @@ def getStories(url, end): #grab stories from reddit url and format them into a l
         title=soup.find(slot="title")
         story+=title.text
 
-        scrapedStory=soup.find_all("p", {"class": None}) #parse thru, find all instances of text without any classes (thats how the stories r formatted)
-        for i in scrapedStory:
+        scraped_story=soup.find_all("p", {"class": None}) #parse thru, find all instances of text without any classes (thats how the stories r formatted)
+        for i in scraped_story:
             story+=i.text  #turn the array of paragraphs into a full story
         print(story)
         stories.append(story)

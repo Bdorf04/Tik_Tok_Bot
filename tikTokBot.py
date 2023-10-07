@@ -1,9 +1,10 @@
-from getStories import getStories
-from getAudio import PYTTSX3saveAudios
-from createVideos import createVideos
+from getStories import get_stories
+from getAudio import PYTTSX3_save_audios
+from createVideos import create_videos
+
 
 #after importing all the modules. We can finally use them all together in conjunction
 url="https://www.reddit.com/r/relationships" 
-storyList=getStories(url, 1)
-PYTTSX3saveAudios(storyList, 150)
-createVideos(storyList)
+story_list=get_stories(url, 1)
+PYTTSX3_save_audios(story_list, 150)
+create_videos(story_list)
