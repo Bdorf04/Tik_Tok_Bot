@@ -26,7 +26,7 @@ The code is split into multiple files
 
 We bring all the filed together in tikTokBot.py
 
-''' python
+``` python
 
 from getStories import get_stories
 from getAudio import PYTTSX3_save_audios
@@ -39,4 +39,4 @@ story_list=get_stories(url, 1)
 PYTTSX3_save_audios(story_list, 150)
 create_videos(story_list)
 
-'''
+```
