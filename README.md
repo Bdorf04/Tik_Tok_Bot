@@ -18,13 +18,27 @@ This tiktok bot automatically scrapes stories from reddit, voices it, and combin
     'git clone https://github.com/Bdorf04 Tik_Tok_Bot.git'
 
 
-The code is split into multiple files
+The code is split into multiple files, each which need a little tweaking
 
+* The audio/video files
+    These files are where we store our videos and audios
 * createVideos.py
+    within this file, we need to specify which video we are going to create our clips from. In here my file is
+    ``` python
+    video_clip = VideoFileClip("mineCraftGameplay.mp4").subclip(video_start, video_start+audio_length)
+    ```
+    You can name this file whatever you want, but made sure it is inside the folder your code is in
 * getAudio.py
+    This is where we turn the stories into audio files
 * getStories.py
+    This is where we pull the stories from reddit, the function takes 2 variables. The first is our url, and the second is the number of videos we would like to create
 
-We bring all the filed together in tikTokBot.py
+    ``` python
+    #This code makes 10 videos from the r/relationships reddit
+    url="https://www.reddit.com/r/relationships" 
+    story_list=get_stories(url, 10)
+    ```
+Finally, we bring all the files together, finishing our tiktok Bot!
 
 ``` python
 
@@ -34,7 +48,7 @@ from createVideos import create_videos
 
 
 #after importing all the modules. We can finally use them all together in conjunction
-url="https://www.reddit.com/r/relationships" 
+url="https://www.reddit.com/r/TIFU" 
 story_list=get_stories(url, 1)
 PYTTSX3_save_audios(story_list, 150)
 create_videos(story_list)
