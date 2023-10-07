@@ -1,5 +1,5 @@
 # TikTok_Bot
-## By Brett Dorfman
+## By [Brett Dorfman](www.linkedin.com/in/brett-dorfman)
 ### CS @ NJIT
 
 This tiktok bot automatically scrapes stories from reddit, voices it, and combines it with a randomy generated Minecraft clip. 
